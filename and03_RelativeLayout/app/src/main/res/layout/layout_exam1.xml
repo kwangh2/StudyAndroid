@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/rightbottombutton"
+    android:text="Button1"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentBottom="true"
+    android:layout_width="100dp"
+    android:layout_height="100dp"/>
+
+    <Button
+        android:id="@+id/centerbutton"
+        android:layout_centerInParent="true"
+        android:text="Button2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
+    <Button
+        android:id="@+id/nonespacebutton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/rightbottombutton"
+        android:layout_alignTop="@id/centerbutton"
+        android:layout_centerInParent="true"
+        android:text="Button3" />
+
+    <Button
+        android:id="@+id/leftcenter"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignTop="@+id/centerbutton"
+        android:layout_alignParentLeft="true"
+        android:text="Button4" />
+
+    <Button
+        android:id="@+id/baselinebutton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignBaseline="@id/rightbottombutton"
+        android:text="Button5" />
+
+    <Button
+        android:id="@+id/belowcenter"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/centerbutton"
+        android:text="Button6" />
+
+    <Button
+        android:id="@+id/abovecenter"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_above="@id/centerbutton"
+        android:text="Button8" />
+
+    <Button
+        android:id="@+id/toleftof"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_toLeftOf="@+id/centerbutton"
+        android:text="Button4" />
+
+    <Button
+        android:id="@+id/torightof"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_toRightOf="@+id/centerbutton"
+        android:text="Button4" />
+</RelativeLayout>
