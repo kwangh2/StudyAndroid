@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 //        });
 //        while(true){
             btn_change.setOnClickListener(v -> {
+                //imgv1.setImageResource(R.drawable.img1); <- 실제 이미지 바꾸기
                 //내가 버튼을 누름
                 ++btnNum;
                 if(btnNum==4){
