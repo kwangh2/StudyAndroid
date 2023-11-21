@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="carrot_top_linear">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+
+    </style>
+    <style name="carrot_top_imgv">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_gravity">center</item>
+
+    </style>
+    <style name="carrot_top_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#232323</item>
+        <item name="android:layout_gravity">center</item>
+
+    </style>
+    <style name="carrot_guide_line">
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:background">#EEEEEE</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2dp</item>
+
+    </style>
+
+    <style name="carrot_main_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#000</item>
+
+    </style>
+
+    <style name="carrot_sub_tv" parent="carrot_main_text">
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_marginTop">0dp</item>
+
+
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginLeft">10dp</item>
+
+    </style>
+    <!--<LinearLayout
+
+    <TextView
+            android:layout_width=""
+            ="wrap_content"
+            android:text="나의 당근"
+            =""
+            a=""
+            android:textSize=""
+            =""
+            =""
+            />
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/setting"
+            android:layout_alignParentRight="true"
+            >
+
+        </ImageView>
+    android:layout_gravity="center"
+        andriod:gravity
+        =""
+        =""
+        =""
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="">
+            >
+            <ImageView
+                ="60dp"
+                ="60dp"
+                android:src="@drawable/ic_top_menu1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height=""
+                android:text="판매내역"
+                ="#"/>
+        </LinearLayout>
+    <View
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#EEEEEE"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+    </LinearLayout>
+
+    -->
+</resources>
