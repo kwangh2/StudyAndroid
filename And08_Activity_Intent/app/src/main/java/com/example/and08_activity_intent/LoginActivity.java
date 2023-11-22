@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class LoginActivity extends AppCompatActivity {
     EditText edt_id;
     EditText edt_pw;
@@ -26,6 +28,8 @@ public class LoginActivity extends AppCompatActivity {
         TextView signin = findViewById(R.id.tv_join);
         signin.setOnClickListener(v -> {
             Intent intent = new Intent(this,sign.class);
+
+
             startActivity(intent);
 
         });
@@ -42,8 +46,19 @@ public class LoginActivity extends AppCompatActivity {
 
             if (edt_id.getText().toString().equals("admin") && edt_pw.getText().toString().equals("admin1234")) {
                 Log.d("로그인", "로그인 성공");
+                LoginDTO dto = new LoginDTO(edt_id.getText().toString() , edt_pw.getText().toString());
+                ArrayList<LoginDTO> list = new ArrayList<>();
+                list.add(new LoginDTO("id1","pw1"));
+                list.add(new LoginDTO("id2","pw2"));
+
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                intent.putExtra("strkey","테스트 데이터 String");
+                intent.putExtra("intkey",777777);
+                intent.putExtra("dtokey", dto);
+                intent.putExtra("listkey",list);//dto가 직렬화가 되어있기때문. List<직렬화>==List<로그인클래스>
+
                 startActivity(intent);
+                finish(); //현재 액티비티를 액티비티 스택에서 제거하고 종료
             }else{
                 Log.d("로그인", "로그인 실패");
                 Log.d("로그인", "pw: "+ edt_pw.getText());
