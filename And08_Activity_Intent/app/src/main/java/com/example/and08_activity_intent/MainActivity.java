@@ -26,8 +26,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Log.d(TAG, "onCreate: ");
 
         Intent intent = getIntent(); //LoginActivity에서 보내준 인텐트를 객체로 초기화 시킴
+        Log.d(TAG, "onCreate: " + intent.getIntExtra("intw"));
         Log.d(TAG, "onCreate: " + intent.getStringExtra("strkey"));
-        Log.d(TAG, "onCreate: " + intent.getIntExtra("intkey",-1));
+        Log.d(TAG, "onCreate: " + intent.getIntExtra("dtokey",-1));
         Log.d(TAG, "onCreate: " + intent.getIntExtra("intKey",-1));
         //dto의 필드부분을 전부 바이트형태의 통신 하기 편한 방법으로 일자로 세움 . "loginId" , "값"...
         LoginDTO dto = (LoginDTO) intent.getSerializableExtra("dtokey");

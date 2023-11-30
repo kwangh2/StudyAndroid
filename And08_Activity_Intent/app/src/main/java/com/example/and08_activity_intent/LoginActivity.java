@@ -50,8 +50,9 @@ public class LoginActivity extends AppCompatActivity {
                 ArrayList<LoginDTO> list = new ArrayList<>();
                 list.add(new LoginDTO("id1","pw1"));
                 list.add(new LoginDTO("id2","pw2"));
-
+                int num = 5;
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                intent.putExtra("intw",num);
                 intent.putExtra("strkey","테스트 데이터 String");
                 intent.putExtra("intkey",777777);
                 intent.putExtra("dtokey", dto);
