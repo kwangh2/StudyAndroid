@@ -3,12 +3,14 @@ package com.example.and10_fragmentadapter2.melon;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.and10_fragmentadapter2.R;
+import com.example.and10_fragmentadapter2.recycler.RecyclerAdapter;
 
 import java.util.ArrayList;
 
@@ -26,6 +28,7 @@ public class melonFragment extends Fragment {
         list.add(new MelonDTO(R.drawable.chart_img4 , "To.X" , "태연"));
         list.add(new MelonDTO(R.drawable.chart_img5 , "사랑은 늘 도망가" , "임영웅"));
         list.add(new MelonDTO(R.drawable.chart_img6 , "Seven" , "정국"));
+
         return view;
     }
 }
