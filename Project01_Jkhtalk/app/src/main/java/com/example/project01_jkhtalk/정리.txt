@@ -1,0 +1,42 @@
+1. 뷰결합 (ViewBinding)
+ - 레이아웃 파일 내부에 있는 자원을 자바의 객체 형태로 바꿔 finViewById과정을 생략시킴.
+ -  xml레이아웃 자체를 전부 바인딩 클래스로 생성을 미리 해둠. (android)
+ - 바인딩 인스턴스를 생성하여 내부에서 사용 가능한 객체를 만듬. (LayoutInflater)
+
+  순서 1. Build.gradle(module) 에서 뷰 바인딩을 사용하겠다를 명시
+  viewBinding{
+      enable=true
+  }
+  --------------4.0이상이면 아래버전!
+      buildFeatures {
+          viewBinding = true
+      }
+  }
+  순서 2. 초기화식
+public class MainActivity extends AppCompatActivity {
+    **ActivityMainBinding binding;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        **binding = ActivityMainBinding.inflate(getLayoutInflater());
+        **setContentView(binding.getRoot());
+    }
+}
+
+2. Actionbar
+ - 이전 안드로이드 버전들에서는 Actionbar를 많이 활용함
+ - 현재는 Actionbar를 커스텀하는게 귀찮아서 비슷한 구조를 가진 레이아웃을 만들고 사용.
+ - 테마에서 NoActionbar를 주면 ACtionbar 자체가 없음(null) , 그 외에는 getSupportActionbar 라는 메소드로 액션바에 접근이 가능하다.
+
+
+3. 이미지를 둥글게 처리하기
+ 1. CardView 를 이용한 방법
+    -이미지뷰를 카드뷰내에 넣고 스케일타입을 centerCrop으로 바꿈 넓이 높이는 match_parent
+    -카드뷰에 이미지를 어떤 사이즈로 보여줄지 넣어주고 radius로 모서리를 둥글게 만든다.
+ 2. CircleImageView (외부 라이브러리 활용)
+
+ 3. 이미지를 둥글게 편집 (x)
+
+ 4.스크롤이 있는 뷰와 다른 레이아웃, 뷰를 동시에 스크롤이 되게 처리 (NestedScrollView)
+    - 안드로이드에서 여러 스크롤이 가능한 요소들을 하나의 뷰 안에 겹쳐서 넣을때 사용
+    - 규칙은 자식요소 하나만 가져야함.
