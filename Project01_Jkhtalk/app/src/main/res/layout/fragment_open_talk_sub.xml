@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".opentalk.OpenTalkSubFragment"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <!-- 광고배너를 넣을 자리 -->
+    <ImageView
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/friend_back_img"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recv_opensub1"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <View
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="#D8D8D8"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="효과적인 겨울철 다이어트"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recv_opensub2"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+        <View
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#D8D8D8"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="겨울의 풍경 사진으로 담아요"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recv_opensub3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" />
+        <View
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#D8D8D8"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+        <TextView
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="내 또래가 많이 찾는 방"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recv_opensub4"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

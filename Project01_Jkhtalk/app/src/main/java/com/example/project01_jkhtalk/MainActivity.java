@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import com.example.project01_jkhtalk.chat.ChatFragment;
 import com.example.project01_jkhtalk.databinding.ActivityMainBinding;
 import com.example.project01_jkhtalk.friend.FriendFragment;
+import com.example.project01_jkhtalk.opentalk.OpenTalkMainFragment;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
@@ -43,13 +44,11 @@ public class MainActivity extends AppCompatActivity {
         changeFragment(new FriendFragment());
         binding.bottomNav.setOnItemSelectedListener(item -> {
             if(item.getItemId() == R.id.tab1){
-                actionBar.setTitle("친구");
                 changeFragment(new FriendFragment());
             }else if(item.getItemId() == R.id.tab2){
-                actionBar.setTitle("채팅");
                 changeFragment(new ChatFragment());
             }else if(item.getItemId() == R.id.tab3){
-                actionBar.setTitle("오픈채팅");
+                changeFragment(new OpenTalkMainFragment());
             }else if(item.getItemId() == R.id.tab4){
                 actionBar.setTitle("쇼핑");
             }else if(item.getItemId() == R.id.tab5){
