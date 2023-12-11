@@ -7,16 +7,18 @@
     android:orientation="vertical">
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcyv_individual"
+    <ImageView
+        android:layout_marginHorizontal="20dp"
+        android:scaleType="fitXY"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="150dp"
+        android:src="@drawable/frequency"/>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
-
+            android:fontFamily="@font/santana"
             android:layout_marginVertical="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
