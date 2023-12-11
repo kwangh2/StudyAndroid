@@ -24,9 +24,15 @@ public class MainFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentMainBinding.inflate(inflater, container, false);
-        //MainAdapter adapter = new MainAdapter(inflater);
-        binding.rcyvMain.setAdapter(new MainAdapter(inflater));
-        binding.rcyvMain.setLayoutManager(new LinearLayoutManager(getContext()));
+        binding.rcyvIndividual.setAdapter(new MainAdapter(inflater, getIndividualList()));
+        binding.rcyvIndividual.setLayoutManager(new LinearLayoutManager(getContext()));
         return binding.getRoot();
     }
+    ArrayList<MainDTO> getIndividualList(){
+        ArrayList<MainDTO> list = new ArrayList<>();
+        list.add(new MainDTO(R.drawable.frequency));
+        list.add(new MainDTO(R.drawable.siren));
+        return list;
+    }
+
 }

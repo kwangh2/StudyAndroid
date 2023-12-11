@@ -33,7 +33,7 @@ public class OpenSubAdapter3 extends RecyclerView.Adapter<OpenSubAdapter3.ViewHo
 
     @Override
     public int getItemCount() {
-        return list.size();
+        return 5;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
