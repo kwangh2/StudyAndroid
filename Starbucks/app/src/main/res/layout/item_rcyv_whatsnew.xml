@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="200dp"
+    android:orientation="vertical"
+    >
+    <ImageView
+        android:id="@+id/imgv_whatsnew"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/img_6"
+        />
+    <TextView
+        android:id="@+id/tv_whatsnew_title"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:layout_marginLeft="3dp"
+        android:text="스타벅스 더북한강R점에서 함께하는"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"/>
+    <TextView
+        android:id="@+id/tv_whatsnew_sub"
+        android:text="최대"
+        android:layout_marginLeft="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

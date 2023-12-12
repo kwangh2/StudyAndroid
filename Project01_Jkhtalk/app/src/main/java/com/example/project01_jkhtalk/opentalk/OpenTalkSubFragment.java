@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import com.example.project01_jkhtalk.R;
 import com.example.project01_jkhtalk.databinding.FragmentOpenTalkMainBinding;
 import com.example.project01_jkhtalk.databinding.FragmentOpenTalkSubBinding;
+import com.google.android.material.chip.Chip;
 
 
 public class OpenTalkSubFragment extends Fragment {
@@ -32,6 +33,24 @@ public class OpenTalkSubFragment extends Fragment {
 
         binding.recvOpensub4.setAdapter(new OpenSubAdapter3(dao.getOpenSub4List()));
         binding.recvOpensub4.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL,false));
+
+//        ViewGroup에 자식요소를 넣는것은 addView
+//        xml파일에서 사용한 모든 속성들은 메소드 형태로도 존재함.
+//        Context 필요함 (화면의 상태 정보를 꼭 알아야 하는 경우)
+        String[] chipTexts = {"밀덕" , "등산" , "동화책" , "김태형" , "라이즈" , "명품정보", "송흥민", "레고", "니트", "해외축구" , "시고르자브종" , "이영지"};
+        for (int i = 0; i<chipTexts.length; i++){
+            Chip chip = getChip(chipTexts[i]);
+            binding.chipGrpOpensub.addView(chip);
+        }
+
         return binding.getRoot();
+    }
+
+    Chip getChip(String text){
+        Chip chip = new Chip(getContext(),null , com.google.android.material.R.style.Widget_MaterialComponents_Chip_Choice); //자바에서도 스타일 호출 가능!
+        chip.setText(text);
+        chip.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)); //넓이 높이
+//        binding.chipGrpOpensub.addView(chip); //칩 추가
+        return chip;
     }
 }
