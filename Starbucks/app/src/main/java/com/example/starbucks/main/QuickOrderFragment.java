@@ -3,6 +3,8 @@ package com.example.starbucks.main;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,7 +24,9 @@ public class QuickOrderFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentQuickOrderBinding.inflate(inflater, container,false);
-        binding.
+        QuickOrderAdapter adapter = new QuickOrderAdapter();
+        binding.rcyvQo.setAdapter(adapter);
+        binding.rcyvQo.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL,false));
         return binding.getRoot();
     }
 }
