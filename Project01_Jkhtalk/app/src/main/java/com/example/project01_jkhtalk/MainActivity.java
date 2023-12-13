@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });*/
-
         changeFragment(new FriendFragment());
         binding.bottomNav.setOnItemSelectedListener(item -> {
             if(item.getItemId() == R.id.tab1){

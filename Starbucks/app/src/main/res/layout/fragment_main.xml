@@ -13,14 +13,20 @@
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_height="220dp"
+            app:logo="@drawable/img_9"
+            app:logoScaleType="fitXY"
+            app:contentInsetStart="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStartWithNavigation="0dp"
             android:layout_width="match_parent"
             app:layout_scrollFlags="scroll|snap|enterAlways">
 
-            <ImageView
-                android:scaleType="fitXY"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/img_9"/>
+            <FrameLayout
+            android:background="#123"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
         </com.google.android.material.appbar.MaterialToolbar>
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:backgroundTint="@color/white"

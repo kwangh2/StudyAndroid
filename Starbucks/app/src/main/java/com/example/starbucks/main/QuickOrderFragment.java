@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.starbucks.R;
+import com.example.starbucks.databinding.FragmentPayBinding;
 import com.example.starbucks.databinding.FragmentQuickOrderBinding;
 
 import java.util.ArrayList;
@@ -21,7 +22,7 @@ public class QuickOrderFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentQuickOrderBinding.inflate(inflater, container,false);
-
+        binding.
         return binding.getRoot();
     }
 }
