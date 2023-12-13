@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     //옵저버 패턴 순서 2번
         //양쪽은 같은 인터페이스를 참조한다.
-        new CommonConn(this , "aaa.jkh").onExcute(new CommonConn.JkhCallBack() {
+        new CommonConn(this , "aaa.jkh").addParamMap("param","변수").onExcute(new CommonConn.JkhCallBack() {
             @Override
             public void onResult(boolean isResult, String data) {
                 Log.d("Common", "onResult: " + data);
