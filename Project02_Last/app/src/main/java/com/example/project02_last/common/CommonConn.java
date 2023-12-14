@@ -54,8 +54,8 @@ public class CommonConn {
         service.clientPostMethod(url, paramMap).enqueue(new Callback<String>() {
             @Override
             public void onResponse(retrofit2.Call<String> call, Response<String> response) {
-                Log.d(TAG, "onResponse: " + response.body());
-                Log.d(TAG, "onResponse: " + response.errorBody());
+                Log.i(TAG, "onResponse: " + response.body());
+                Log.i(TAG, "onResponse: " + response.errorBody());
                 if (response.errorBody() == null) {
                     //옵저버 패턴 순서  3: 호출 -> MainActivity new in....
                     callBack.onResult(true, response.body());

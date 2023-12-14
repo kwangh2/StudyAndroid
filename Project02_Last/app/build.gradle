@@ -47,4 +47,13 @@ dependencies {
     // 외부 이미지 붙이기
     implementation group: 'com.github.bumptech.glide', name: 'glide', version: '4.13.2'
 
+
+    //네이버 로그인 api
+    implementation 'com.navercorp.nid:oauth:5.9.0'
+
+    //카카오 로그인 api
+    implementation "com.kakao.sdk:v2-user:2.18.0"
+
+    //smoothBottomBar
+    implementation 'com.github.ibrahimsn98:SmoothBottomBar:1.7.9'
 }

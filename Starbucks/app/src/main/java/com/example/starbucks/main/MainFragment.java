@@ -38,7 +38,8 @@ public class MainFragment extends Fragment {
         pager2.setPadding(100, 0, 200, 0);
         pager2.setPageTransformer(new MarginPageTransformer(100));
         pager2.setAdapter(new MainPagerAdapter(this, getFragmentList()));
-
+        RecyclerView view = new RecyclerView(this);
+        view.setOffsc
         WhatsnewAdapter nAdapter = new WhatsnewAdapter(inflater,getNewList(),getContext());
         binding.rcyvWhatsNew.setAdapter(nAdapter);
         binding.rcyvWhatsNew.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false));
