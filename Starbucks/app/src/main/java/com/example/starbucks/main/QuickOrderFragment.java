@@ -19,14 +19,21 @@ import java.util.ArrayList;
 
 public class QuickOrderFragment extends Fragment {
     FragmentQuickOrderBinding binding;
+    QuickOrderDTO dto;
+
+    public QuickOrderFragment(QuickOrderDTO dto) {
+        this.dto = dto;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentQuickOrderBinding.inflate(inflater, container,false);
         QuickOrderAdapter adapter = new QuickOrderAdapter();
-        binding.rcyvQo.setAdapter(adapter);
-        binding.rcyvQo.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL,false));
+        binding.tvQuickorderMenu.setText(dto.getMenu());
+        binding.tvQuickorderOption.setText(dto.getOption());
+        binding.tvVpQoLocation.setText(dto.getShop());
+        binding.imgvMenuimg.setImageResource(dto.getMenuimg());
         return binding.getRoot();
     }
 }

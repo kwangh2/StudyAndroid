@@ -7,7 +7,7 @@ import android.os.Bundle;
 
 import com.example.starbucks.databinding.ActivityMainBinding;
 import com.example.starbucks.main.MainFragment;
-import com.example.starbucks.menu.MenuFragment;
+import com.example.starbucks.order.OrderFragment;
 import com.example.starbucks.pay.PayFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             }else if(item.getItemId() == R.id.tab2){
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, new PayFragment()).commit();
             }else if(item.getItemId() == R.id.tab3){
-                getSupportFragmentManager().beginTransaction().replace(R.id.container, new MenuFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, new OrderFragment()).commit();
             }
             return true;
         });

@@ -4,7 +4,7 @@ public class MainDTO {
     private String menu, option , shop;
     private int img_menu;
 
-    public MainDTO(String menu, String option, String shop, int img_menu) {
+    public MainDTO(String menu,int img_menu, String option, String shop) {
         this.menu = menu;
         this.option = option;
         this.shop = shop;

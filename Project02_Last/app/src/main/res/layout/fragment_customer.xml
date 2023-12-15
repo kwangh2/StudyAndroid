@@ -6,33 +6,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".customer.CustomerFragment"
     android:orientation="vertical">
-
-    <com.google.android.material.search.SearchBar
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_anchor="@id/search_bar"
-        android:hint="검색어 입력"/>
-    <com.google.android.material.search.SearchView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:hint="검색"
-        app:layout_anchor="@id/search_bar">
-    </com.google.android.material.search.SearchView>
+        app:queryHint="검색어 입력"/>
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recv_customer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab_insert"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_gravity="right|bottom"
             android:layout_margin="16dp"
-            android:src="@drawable/ic_add"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add"
+            />
 
     </FrameLayout>
+
+
 </LinearLayout>

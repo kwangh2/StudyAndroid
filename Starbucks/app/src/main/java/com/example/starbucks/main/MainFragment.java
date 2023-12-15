@@ -38,8 +38,6 @@ public class MainFragment extends Fragment {
         pager2.setPadding(100, 0, 200, 0);
         pager2.setPageTransformer(new MarginPageTransformer(100));
         pager2.setAdapter(new MainPagerAdapter(this, getFragmentList()));
-        RecyclerView view = new RecyclerView(this);
-        view.setOffsc
         WhatsnewAdapter nAdapter = new WhatsnewAdapter(inflater,getNewList(),getContext());
         binding.rcyvWhatsNew.setAdapter(nAdapter);
         binding.rcyvWhatsNew.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false));
@@ -50,9 +48,10 @@ public class MainFragment extends Fragment {
 
     ArrayList<Fragment> getFragmentList() {
         ArrayList<Fragment> list = new ArrayList<>();
-        list.add(new QuickOrderFragment());
-        list.add(new QuickOrderFragment());
-        list.add(new QuickOrderFragment());
+
+        list.add(new QuickOrderFragment(new QuickOrderDTO("자몽 허니 블랙 티" ,"ICED | Venti","광주신안DT" , R.drawable.menu_ghbt )));
+        list.add(new QuickOrderFragment(new QuickOrderDTO("돌체 콜드브루" ,"ICED | Venti","광주신안DT" , R.drawable.menu_dolcecb )));
+        list.add(new QuickOrderFragment(new QuickOrderDTO("유자 민트 티" ,"ICED | Venti","광주신안DT" , R.drawable.menu_minttea )));
         return list;
     }
 
@@ -66,10 +65,10 @@ public class MainFragment extends Fragment {
     };
     ArrayList<MainDTO> getMenuList(){
         ArrayList<MainDTO> list =  new ArrayList<>();
-        list.add(new MainDTO("유자 민트티" , "HOT | Venti", "광주신안DT",R.drawable.menu_minttea));
-        list.add(new MainDTO("돌체 콜드 브루" , "ICED | Venti", "광주신안DT",R.drawable.menu_dolcecb));
-        list.add(new MainDTO("아이스 자몽 허니 블랙 티" , "ICED | Trenta", "광주신안DT",R.drawable.menu_ghbt));
-        list.add(new MainDTO("아이스 자몽 허니 블랙 티" , "ICED | Trenta", "광주신안DT",R.drawable.menu_hibiscus));
+        list.add(new MainDTO("유자 민트티" ,R.drawable.menu_minttea ,"HOT | Venti", "광주신안DT"));
+        list.add(new MainDTO("돌체 콜드 브루" ,R.drawable.menu_dolcecb, "ICED | Venti", "광주신안DT"));
+        list.add(new MainDTO("아이스 자몽 허니 블랙 티" ,R.drawable.menu_ghbt, "ICED | Trenta", "광주신안DT"));
+        list.add(new MainDTO("아이스 자몽 허니 블랙 티" ,R.drawable.menu_hibiscus, "ICED | Trenta", "광주신안DT"));
         return list;
     }
 }
