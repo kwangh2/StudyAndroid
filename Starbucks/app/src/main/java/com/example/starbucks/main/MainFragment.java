@@ -43,7 +43,6 @@ public class MainFragment extends Fragment {
         binding.rcyvWhatsNew.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false));
 
         return binding.getRoot();
-
     }
 
     ArrayList<Fragment> getFragmentList() {
