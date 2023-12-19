@@ -3,8 +3,6 @@ pluginManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
-        //토글 받을려고 넣어놓음
-        jcenter()
     }
 }
 dependencyResolutionManagement {
@@ -15,6 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Starbucks"
-include(":app")
- 
+rootProject.name = "My Application"
+include ':app'

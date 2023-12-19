@@ -21,11 +21,6 @@
             android:layout_width="match_parent"
             app:layout_scrollFlags="scroll|snap|enterAlways">
 
-            <FrameLayout
-            android:background="#123"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-
 
         </com.google.android.material.appbar.MaterialToolbar>
         <com.google.android.material.appbar.CollapsingToolbarLayout

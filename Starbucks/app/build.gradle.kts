@@ -34,6 +34,9 @@ android {
 }
 
 dependencies {
+    //토글 받을려고 넣어놓음
+    implementation ("com.github.zcweng:switch-button:0.0.3@aar")
+
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.8.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
