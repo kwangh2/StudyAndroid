@@ -10,6 +10,7 @@ import com.example.project02_last.common.CommonConn;
 import com.example.project02_last.customer.CustomerFragment;
 import com.example.project02_last.databinding.ActivityMainBinding;
 import com.example.project02_last.file.FileActivity;
+import com.example.project02_last.map.JkhMapFragment;
 
 import me.ibrahimsn.lib.OnItemSelectedListener;
 
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
         setContentView(binding.getRoot());
 
         binding.bottomBar.setOnItemSelectedListener(this);
-        onItemSelect(0);
+        onItemSelect(2);
     }
 
     @Override
@@ -34,6 +35,8 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
         } else if (i ==1) {
             Intent intent = new Intent(MainActivity.this, FileActivity.class);
             startActivity(intent);
+        }else if(i==2){
+            getSupportFragmentManager().beginTransaction().replace(binding.container.getId(),new JkhMapFragment()).commit();
         }
         return true;
     }
