@@ -18,12 +18,12 @@ FragmentMyMenuBinding binding;
         binding = FragmentMyMenuBinding.inflate(inflater,container,false);
 
         SwitchButton switchButton = (com.suke.widget.SwitchButton)binding.switchButton;
-        switchButton.setChecked(true);
+        switchButton.setChecked(false);
         switchButton.isChecked();
         switchButton.toggle();     //switch state
-        switchButton.toggle(false);//switch without animation
+        switchButton.toggle(true);//switch without animation
         switchButton.setShadowEffect(true);//disable shadow effect
-        switchButton.setEnabled(false);//disable button
+        switchButton.setEnabled(true);//disable button
         switchButton.setEnableEffect(false);//disable the switch animation
 
         return binding.getRoot();

@@ -38,8 +38,10 @@ public class AllMenuFragment extends Fragment {
                     binding.rcyvBeverage.setLayoutManager(new LinearLayoutManager(getContext()));
                 } else if(position ==1) {
                     AllMenuAdapter adapter = new AllMenuAdapter(inflater,addfood(),getContext());
+
                     binding.rcyvBeverage.setAdapter(adapter);
                     binding.rcyvBeverage.setLayoutManager(new LinearLayoutManager(getContext()));
+
                 }else if(position ==2){
                     AllMenuAdapter adapter = new AllMenuAdapter(inflater,addgoods(),getContext());
                     binding.rcyvBeverage.setAdapter(adapter);

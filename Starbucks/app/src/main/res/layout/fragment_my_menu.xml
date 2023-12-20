@@ -18,6 +18,7 @@
             android:textSize="18dp"
             android:layout_toRightOf="@id/ic_change"/>
         <ImageView
+            android:layout_marginLeft="10dp"
             android:id="@+id/ic_change"
             android:layout_width="30dp"
             android:layout_height="30dp"
@@ -32,5 +33,9 @@
 
     </RelativeLayout>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcyv_my_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>
